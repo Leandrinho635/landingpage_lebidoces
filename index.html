@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeBi Doces — Bolos artesanais feitos com amor</title>
+  <meta name="description" content="LeBi Doces: bolos artesanais e doces feitos com carinho. Conheça nossos bolos e faça sua encomenda pelo WhatsApp." />
+  <meta name="theme-color" content="#f9e4e8" />
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+
+  <!-- Open Graph (prévia ao compartilhar o link) -->
+  <meta property="og:title" content="LeBi Doces" />
+  <meta property="og:description" content="Bolos artesanais feitos com amor. Encomende pelo WhatsApp!" />
+  <meta property="og:image" content="assets/img/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Cabeçalho ===== -->
+  <header class="header" id="topo">
+    <nav class="nav container">
+      <a href="#topo" class="nav__brand">
+        <img src="assets/img/logo.png" alt="Logo LeBi Doces" class="nav__logo" />
+        <span class="nav__name">LeBi Doces</span>
+      </a>
+      <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#bolos">Nossos Bolos</a></li>
+        <li><a href="#como-encomendar">Como Encomendar</a></li>
+        <li><a href="#contato" class="nav__cta">Entre em contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero__content">
+        <div class="hero__text reveal">
+          <p class="hero__tag">Confeitaria artesanal</p>
+          <h1 class="hero__title">Doces momentos<br />feitos com <span>amor</span></h1>
+          <p class="hero__subtitle">
+            Bolos artesanais preparados com ingredientes selecionados e muito carinho,
+            para deixar cada celebração ainda mais especial.
+          </p>
+          <div class="hero__actions">
+            <a href="#bolos" class="btn btn--primary">Ver bolos</a>
+            <a href="#" class="btn btn--outline js-whatsapp" target="_blank" rel="noopener">Fazer encomenda</a>
+          </div>
+        </div>
+        <div class="hero__image reveal">
+          <img src="assets/img/logo.png" alt="LeBi Doces" />
+        </div>
+      </div>
+      <div class="hearts" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== Sobre ===== -->
+    <section class="section sobre" id="sobre">
+      <div class="container">
+        <h2 class="section__title reveal">Sobre a LeBi</h2>
+        <p class="section__lead reveal">
+          A LeBi Doces nasceu da paixão por confeitaria e do desejo de adoçar a vida das pessoas.
+          Cada bolo é feito à mão, sob encomenda, pensado nos mínimos detalhes para combinar com o seu momento.
+        </p>
+        <div class="features">
+          <div class="feature reveal">
+            <div class="feature__icon">🧁</div>
+            <h3>Artesanal</h3>
+            <p>Receitas próprias, preparadas uma a uma com todo cuidado.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">🍓</div>
+            <h3>Ingredientes frescos</h3>
+            <p>Frutas da estação e ingredientes de qualidade em cada fatia.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">🎀</div>
+            <h3>Personalizado</h3>
+            <p>Sabores e decoração do seu jeito, para qualquer ocasião.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Galeria de bolos ===== -->
+    <section class="section bolos" id="bolos">
+      <div class="container">
+        <h2 class="section__title reveal">Nossos Bolos</h2>
+        <p class="section__lead reveal">Um pouquinho do que sai da nossa cozinha. Gostou de algum? É só pedir!</p>
+        <div class="gallery" id="gallery"><!-- preenchido via js/main.js --></div>
+      </div>
+    </section>
+
+    <!-- ===== Como encomendar ===== -->
+    <section class="section passos" id="como-encomendar">
+      <div class="container">
+        <h2 class="section__title reveal">Como Encomendar</h2>
+        <ol class="steps">
+          <li class="step reveal"><span class="step__num">1</span><h3>Escolha</h3><p>Navegue pela galeria e escolha o sabor ou inspire-se para criar o seu.</p></li>
+          <li class="step reveal"><span class="step__num">2</span><h3>Chame no WhatsApp</h3><p>Conte a data, quantidade de pessoas e como imagina o seu bolo.</p></li>
+          <li class="step reveal"><span class="step__num">3</span><h3>Aproveite</h3><p>Combinamos os detalhes e seu bolo fica pronto no dia marcado. 💕</p></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Rodapé / Entre em contato ===== -->
+  <footer class="footer" id="contato">
+    <div class="container footer__content">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="Logo LeBi Doces" class="footer__logo" />
+      </div>
+
+      <div class="footer__contact">
+        <h2 class="footer__title">Entre em contato</h2>
+        <p>Faça sua encomenda ou tire suas dúvidas diretamente pelo WhatsApp.</p>
+        <a href="#" class="whatsapp-btn js-whatsapp" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp com a LeBi Doces">
+          <svg class="whatsapp-btn__icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="currentColor" d="M16.04 3C8.86 3 3.02 8.83 3.02 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75a13 13 0 0 0 6.36 1.62h.01C23.21 28.87 29 23.04 29 15.87 29 8.83 23.21 3 16.04 3Zm0 23.68h-.01a10.8 10.8 0 0 1-5.5-1.5l-.4-.24-3.96 1.04 1.06-3.86-.26-.4a10.75 10.75 0 0 1-1.65-5.73c0-5.96 4.85-10.8 10.82-10.8 5.88 0 10.68 4.84 10.68 10.7 0 5.96-4.86 10.79-10.78 10.79Zm5.92-8.08c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.51-.16-.73.16-.21.32-.84 1.06-1.03 1.27-.19.21-.38.24-.7.08-.32-.16-1.37-.5-2.6-1.6-.96-.86-1.61-1.92-1.8-2.24-.19-.32-.02-.5.14-.65.15-.14.32-.38.48-.56.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.21 0-.56.08-.86.4-.3.32-1.13 1.1-1.13 2.69 0 1.58 1.16 3.12 1.32 3.33.16.21 2.28 3.48 5.52 4.88.77.33 1.37.53 1.84.68.77.25 1.48.21 2.03.13.62-.09 1.92-.78 2.19-1.54.27-.76.27-1.4.19-1.54-.08-.13-.29-.21-.61-.37Z"/>
+          </svg>
+          <span>Chamar no WhatsApp</span>
+        </a>
+        <a href="#" class="footer__insta js-instagram" target="_blank" rel="noopener">@lebi_doces</a>
+      </div>
+    </div>
+    <p class="footer__copy">© <span id="ano"></span> LeBi Doces · Feito com 💗</p>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="#" class="whatsapp-float js-whatsapp" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="currentColor" d="M16.04 3C8.86 3 3.02 8.83 3.02 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75a13 13 0 0 0 6.36 1.62h.01C23.21 28.87 29 23.04 29 15.87 29 8.83 23.21 3 16.04 3Zm0 23.68h-.01a10.8 10.8 0 0 1-5.5-1.5l-.4-.24-3.96 1.04 1.06-3.86-.26-.4a10.75 10.75 0 0 1-1.65-5.73c0-5.96 4.85-10.8 10.82-10.8 5.88 0 10.68 4.84 10.68 10.7 0 5.96-4.86 10.79-10.78 10.79Zm5.92-8.08c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.51-.16-.73.16-.21.32-.84 1.06-1.03 1.27-.19.21-.38.24-.7.08-.32-.16-1.37-.5-2.6-1.6-.96-.86-1.61-1.92-1.8-2.24-.19-.32-.02-.5.14-.65.15-.14.32-.38.48-.56.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.21 0-.56.08-.86.4-.3.32-1.13 1.1-1.13 2.69 0 1.58 1.16 3.12 1.32 3.33.16.21 2.28 3.48 5.52 4.88.77.33 1.37.53 1.84.68.77.25 1.48.21 2.03.13.62-.09 1.92-.78 2.19-1.54.27-.76.27-1.4.19-1.54-.08-.13-.29-.21-.61-.37Z"/>
+          </svg>
+  </a>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
