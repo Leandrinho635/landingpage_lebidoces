@@ -7,7 +7,7 @@ window.LEBI_CONFIG = {
   whatsappNumero: "554184061812",
 
   // Mensagem que já aparece escrita quando o cliente abre a conversa
-  whatsappMensagem: "Olá, LeBi Doces! Vim pelo site e gostaria de fazer uma encomenda 🎂",
+  whatsappMensagem: "Olá, LeBi Doces! Vim pelo site e gostaria de fazer uma encomenda 🍰",
 
   instagram: "lebi_doces",
 

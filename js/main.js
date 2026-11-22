@@ -11,7 +11,9 @@
   function linkWhatsApp(mensagem) {
     const numero = String(cfg.whatsappNumero || "").replace(/\D/g, "");
     const texto = encodeURIComponent(mensagem || cfg.whatsappMensagem || "");
-    return `https://wa.me/${numero}${texto ? `?text=${texto}` : ""}`;
+    // Usa api.whatsapp.com em vez de wa.me: o redirecionamento do wa.me
+    // corrompe emojis (aparecem como "�"), principalmente no WhatsApp Web/Desktop.
+    return `https://api.whatsapp.com/send?phone=${numero}${texto ? `&text=${texto}` : ""}`;
   }
 
   // Botões gerais de WhatsApp (rodapé, hero e botão flutuante)
