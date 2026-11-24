@@ -17,14 +17,17 @@ Tudo que muda com frequência fica em [`js/config.js`](js/config.js):
 | `whatsappNumero`   | Número do WhatsApp, só dígitos, com 55 + DDD. Ex.: `5511987654321`      |
 | `whatsappMensagem` | Mensagem que já vem escrita quando o cliente abre a conversa            |
 | `instagram`        | Usuário do Instagram (sem @)                                            |
-| `bolos`            | Lista de bolos da galeria (nome, descrição, foto e categoria)           |
+| `bolos`            | Lista de bolos da galeria (nome, descrição, categoria e mídias)         |
 
-### Adicionando fotos dos bolos
+### Adicionando fotos e vídeos dos bolos
 
-1. Coloque as fotos em `assets/bolos/` (de preferência `.jpg`, proporção 4:3).
-2. Em `js/config.js`, aponte o campo `foto` do bolo para o arquivo, ex.: `assets/bolos/red-velvet.jpg`.
+1. Coloque os arquivos em `assets/bolos/` (nomes sem espaços e sem acentos, ex.: `ninho-morango.jpeg`).
+2. Em `js/config.js`, adicione cada arquivo à lista `midias` do bolo:
+   `{ tipo: "foto", src: "assets/bolos/ninho-morango.jpeg", foco: "50% 45%" }` ou `{ tipo: "video", src: "assets/bolos/bolo.mp4" }`.
+3. Com mais de uma mídia, o cartão vira um carrossel (setas, bolinhas e arrastar no celular).
 
-Enquanto a foto não existir, o site mostra um cartão ilustrado no lugar.
+As fotos são recortadas em formato quadrado. Use `foco` ("horizontal vertical" em %) para escolher
+qual parte da foto fica visível. Enquanto um arquivo não existir, o site mostra um cartão ilustrado no lugar.
 
 ## Botão do WhatsApp
 

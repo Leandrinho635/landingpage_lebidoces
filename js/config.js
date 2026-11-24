@@ -12,14 +12,55 @@ window.LEBI_CONFIG = {
   instagram: "lebi_doces",
 
   // Catálogo de bolos exibido na galeria.
-  // Coloque as fotos em assets/bolos/ e informe o nome do arquivo em "foto".
-  // Se a foto não existir, um cartão ilustrado é exibido no lugar.
+  // Coloque as fotos/vídeos em assets/bolos/ (nomes sem espaços e sem acentos).
+  // Cada bolo tem uma lista "midias"; com mais de uma, o cartão vira um carrossel.
+  //   tipo:  "foto" ou "video"
+  //   src:   caminho do arquivo
+  //   foco:  (opcional) ponto da imagem que deve ficar visível no recorte,
+  //          "horizontal vertical" em %. Ex.: "50% 70%" = centro, mais para baixo.
+  // Se um arquivo não existir, um cartão ilustrado é exibido no lugar.
   bolos: [
-    { nome: "Bolo de Morango com Ninho", descricao: "Massa branca fofinha, recheio de creme de Ninho e morangos frescos.", foto: "assets/bolos/morango-ninho.jpg", categoria: "Festa" },
-    { nome: "Red Velvet", descricao: "Massa aveludada com cobertura de cream cheese e frutas vermelhas.", foto: "assets/bolos/red-velvet.jpg", categoria: "Festa" },
-    { nome: "Chocolate Belga", descricao: "Massa de cacau intensa com ganache de chocolate belga.", foto: "assets/bolos/chocolate.jpg", categoria: "Clássico" },
-    { nome: "Bolo de Pote", descricao: "Camadas cremosas no pote, perfeito para presentear.", foto: "assets/bolos/bolo-de-pote.jpg", categoria: "Individual" },
-    { nome: "Naked Cake", descricao: "Visual rústico e elegante, decorado com flores e frutas.", foto: "assets/bolos/naked-cake.jpg", categoria: "Casamento" },
-    { nome: "Cenoura com Brigadeiro", descricao: "O clássico caseiro com cobertura generosa de brigadeiro.", foto: "assets/bolos/cenoura.jpg", categoria: "Caseiro" }
+    {
+      nome: "Ninho com Morango",
+      descricao: "Bolo coberto com chantilly, bordas decoradas e morangos frescos por cima.",
+      categoria: "Festa",
+      midias: [
+        { tipo: "foto", src: "assets/bolos/ninho-morango.jpeg", foco: "50% 45%" }
+      ]
+    },
+    {
+      nome: "Bolo de Prestígio",
+      descricao: "Massa de chocolate, recheio cremoso de coco e cobertura de chocolate. Pode ser decorado para aniversários.",
+      categoria: "Aniversário",
+      midias: [
+        { tipo: "foto", src: "assets/bolos/prestigio-aniversario.jpeg", foco: "50% 65%" },
+        { tipo: "foto", src: "assets/bolos/prestigio.jpeg", foco: "55% 55%" }
+      ]
+    },
+    {
+      nome: "Bolo de Pote de Prestígio",
+      descricao: "Camadas de massa de chocolate e creme de coco no pote, perfeito para presentear.",
+      categoria: "Individual",
+      midias: [
+        { tipo: "foto", src: "assets/bolos/pote-prestigio.jpeg", foco: "50% 55%" }
+      ]
+    },
+    {
+      nome: "Bolo de Cenoura com Chocolate",
+      descricao: "O clássico caseiro: massa de cenoura fofinha com cobertura de chocolate.",
+      categoria: "Caseiro",
+      midias: [
+        { tipo: "foto", src: "assets/bolos/cenoura-chocolate.jpeg", foco: "70% 65%" },
+        { tipo: "video", src: "assets/bolos/cenoura-chocolate.mp4" }
+      ]
+    },
+    {
+      nome: "Bolo com Calda Quente de Chocolate",
+      descricao: "Massa de chocolate molhadinha com calda quente de chocolate por cima.",
+      categoria: "Caseiro",
+      midias: [
+        { tipo: "foto", src: "assets/bolos/calda-quente-chocolate.jpeg", foco: "50% 75%" }
+      ]
+    }
   ]
 };
