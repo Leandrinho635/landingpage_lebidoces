@@ -134,6 +134,41 @@
     }, { passive: true });
   }
 
+  // Minivlog "Da nossa cozinha": só baixa o vídeo quando a seção se aproxima
+  // da tela, toca sem som enquanto está visível e pausa fora dela.
+  const vlog = document.querySelector(".cozinha__video");
+  const somBtn = document.querySelector(".cozinha__som");
+  if (vlog) {
+    const semMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const carregar = () => {
+      if (!vlog.src) { vlog.src = vlog.dataset.src; vlog.load(); }
+    };
+
+    if (semMovimento) {
+      // Quem prefere menos animação: nada toca sozinho, usa os controles do vídeo
+      vlog.controls = true;
+      vlog.preload = "metadata";
+      carregar();
+    } else if ("IntersectionObserver" in window) {
+      new IntersectionObserver(([e]) => { if (e.isIntersecting) carregar(); }, { rootMargin: "400px 0px" }).observe(vlog);
+      new IntersectionObserver(([e]) => {
+        if (e.isIntersecting) vlog.play().catch(() => {});
+        else vlog.pause();
+      }, { threshold: 0.5 }).observe(vlog);
+    } else {
+      carregar();
+      vlog.play().catch(() => {});
+    }
+
+    somBtn.addEventListener("click", () => {
+      vlog.muted = !vlog.muted;
+      if (!vlog.muted) { carregar(); vlog.play().catch(() => {}); }
+      somBtn.textContent = vlog.muted ? "🔇" : "🔊";
+      somBtn.setAttribute("aria-pressed", String(!vlog.muted));
+      somBtn.setAttribute("aria-label", vlog.muted ? "Ativar som do vídeo" : "Desativar som do vídeo");
+    });
+  }
+
   // Menu mobile
   const toggle = document.querySelector(".nav__toggle");
   const menu = document.querySelector(".nav__menu");

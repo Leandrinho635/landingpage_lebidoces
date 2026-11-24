@@ -33,6 +33,7 @@
       <ul class="nav__menu">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#bolos">Nossos Bolos</a></li>
+        <li><a href="#cozinha">Nossa Cozinha</a></li>
         <li><a href="#como-encomendar">Como Encomendar</a></li>
         <li><a href="#contato" class="nav__cta">Entre em contato</a></li>
       </ul>
@@ -96,6 +97,24 @@
         <h2 class="section__title reveal">Nossos Bolos</h2>
         <p class="section__lead reveal">Um pouquinho do que sai da nossa cozinha. Gostou de algum? É só pedir!</p>
         <div class="gallery" id="gallery"><!-- preenchido via js/main.js --></div>
+      </div>
+    </section>
+
+    <!-- ===== Da nossa cozinha (minivlog) ===== -->
+    <section class="section cozinha" id="cozinha">
+      <div class="container cozinha__grid">
+        <div class="cozinha__phone reveal">
+          <!-- O vídeo só carrega quando o visitante chega nesta parte (ver js/main.js) -->
+          <video class="cozinha__video" data-src="assets/video/minivlog.mp4" muted loop playsinline preload="none"
+                 aria-label="Minivlog: bastidores da LeBi Doces"></video>
+          <button class="cozinha__som" type="button" aria-pressed="false" aria-label="Ativar som do vídeo">🔇</button>
+        </div>
+        <div class="cozinha__texto reveal">
+          <h2 class="section__title cozinha__title">Da nossa cozinha até você</h2>
+          <p>Cada bolo da LeBi nasce aqui: massa batida na hora, recheio feito em casa e decoração pensada no seu momento.</p>
+          <p>Nada de produção em série. É tudo feito à mão, com carinho, do jeitinho que você imaginou.</p>
+          <a href="#" class="btn btn--primary js-whatsapp" target="_blank" rel="noopener">Quero o meu bolo</a>
+        </div>
       </div>
     </section>
 

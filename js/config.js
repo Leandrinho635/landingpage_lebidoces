@@ -25,7 +25,12 @@ window.LEBI_CONFIG = {
       descricao: "Bolo coberto com chantilly, bordas decoradas e morangos frescos por cima.",
       categoria: "Festa",
       midias: [
-        { tipo: "foto", src: "assets/bolos/ninho-morango.jpeg", foco: "50% 45%" }
+        { tipo: "foto", src: "assets/bolos/ninho-morango-bi.jpeg", foco: "50% 32%" },
+        { tipo: "foto", src: "assets/bolos/ninho-morango-aniversario.jpeg", foco: "50% 48%" },
+        { tipo: "foto", src: "assets/bolos/ninho-morango.jpeg", foco: "50% 45%" },
+        { tipo: "foto", src: "assets/bolos/ninho-morango-2.jpeg", foco: "50% 70%" },
+        { tipo: "video", src: "assets/bolos/ninho-morango.mp4" },
+        { tipo: "foto", src: "assets/bolos/ninho-morango-3.jpeg", foco: "50% 90%" }
       ]
     },
     {
